@@ -1,0 +1,6 @@
+[0, 0] [0, 1] [1, 0] null
+true false false [0, 1]
+
+allocate+release with floors 0-3 full (F=5, S=2000):
+  linear scan   : 3864 ns
+  count + stack : 471 ns

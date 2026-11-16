@@ -1,0 +1,7 @@
+Creating ElectricCar("TN09EV0001", 40):
+  Vehicle(TN09EV0001) constructor
+  Car constructor
+  ElectricCar constructor
+Fee for 3 h: Rs 105.0  (seats inherited = 5)
+Composition e-bike, 3 h: Rs 45.0
+50M fee-rate lookups: inheritance 52 ms, composition 46 ms (both O(1)) [true]

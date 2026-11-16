@@ -1,0 +1,17 @@
+digraph G {
+  rankdir=BT; nodesep=0.2; ranksep=0.5; node [shape=record, fontname="Helvetica", fontsize=10, style=filled, fillcolor="#F4F7FB"]; edge [fontname="Helvetica", fontsize=9];
+  Vehicle [label="{«abstract»\nVehicle|# ratePerHour()\l+ calculateFee(minutes)\l+ calculateFee(entry, exit)  NEW\l}", fillcolor="#FDE9E7"];
+  TwoWheeler; Car; ElectricCar;
+  EBike [label="{EBike  NEW|flat Rs 20}", fillcolor="#E6F4EA"];
+  DeliveryVan [label="{DeliveryVan  NEW|peak = 2 x rate\l09:00-17:00}", fillcolor="#E6F4EA"];
+  TwoWheeler -> Vehicle [arrowhead=empty]; Car -> Vehicle [arrowhead=empty]; ElectricCar -> Car [arrowhead=empty];
+  EBike -> Vehicle [arrowhead=empty]; DeliveryVan -> Vehicle [arrowhead=empty];
+  Pass [label="{«interface»\nPass  NEW|+ coversParking(day)\l+ price()\l}", fillcolor="#E6F4EA"];
+  MonthlyPass [label="MonthlyPass  NEW", fillcolor="#E6F4EA"]; OneDayPass [label="OneDayPass  NEW", fillcolor="#E6F4EA"];
+  MonthlyPass -> Pass [arrowhead=empty, style=dashed]; OneDayPass -> Pass [arrowhead=empty, style=dashed];
+  Factory [label="{VehicleFactory|register(type, maker)\lcreate(type, regNo)\l}"];
+  Service [label="{ParkingService|enter(...)\lenter(..., Pass, day)  NEW\lsellPass(Pass)  NEW\lexit(...)  1 line changed\l}", fillcolor="#FDE9E7"];
+  Facility [label="{ParkingFacility|String[][] slots (jagged)}"];
+  Store [label="{«interface»\nTicketStore}"];
+  Service -> Facility [arrowhead=odiamond]; Service -> Store [arrowhead=odiamond]; Service -> Factory [style=dashed, label="uses"]; Service -> Pass [style=dashed, label="uses"];
+}

@@ -1,0 +1,28 @@
+ID  | Test case                                        | Expected                           | Actual                             | Result
+T01 | Normal: two-wheeler 60 min                       | 10.0                               | 10.0                               | PASS
+T02 | Normal: car 130 min (3 started hours)            | 90.0                               | 90.0                               | PASS
+T03 | Normal: EV 130 min                               | 105.0                              | 105.0                              | PASS
+T04 | Normal: EV charging 10 kWh                       | 120.0                              | 120.0                              | PASS
+T05 | Boundary: zero-minute parking                    | 0.0                                | 0.0                                | PASS
+T06 | Boundary: 1 minute is a full hour                | 30.0                               | 30.0                               | PASS
+T07 | Boundary: exactly 60 min (slab edge)             | 30.0                               | 30.0                               | PASS
+T08 | Boundary: 61 min (just past slab edge)           | 60.0                               | 60.0                               | PASS
+T09 | Boundary: exactly 8 h = daily max                | 240.0                              | 240.0                              | PASS
+T10 | Boundary: 9 h capped at daily max                | 240.0                              | 240.0                              | PASS
+T11 | Boundary: last free slot -> floor,slot           | 0,0                                | 0,0                                | PASS
+T12 | Invalid: facility full                           | Parking full                       | Parking full                       | PASS
+T13 | Invalid: unknown vehicle type                    | Unknown vehicle type: TRUCK        | Unknown vehicle type: TRUCK        | PASS
+T14 | Invalid: duplicate registration number           | Vehicle already parked: LAST1      | Vehicle already parked: LAST1      | PASS
+T15 | Invalid: release floor 5                         | false                              | false                              | PASS
+T16 | Invalid: release slot -1                         | false                              | false                              | PASS
+T17 | Invalid: release already-free slot               | false                              | false                              | PASS
+T18 | Invalid: exit with no ticket                     | No active ticket for NOPE          | No active ticket for NOPE          | PASS
+T19 | Invalid: exit before entry time                  | Exit time before entry time        | Exit time before entry time        | PASS
+T20 | Normal: exit frees the slot (fee 1 h car)        | 30.0                               | 30.0                               | PASS
+T21 | Normal: freed slot is reused                     | 0,0                                | 0,0                                | PASS
+T22 | Rule: ticket numbers strictly increase           | true                               | true                               | PASS
+T23 | Rule: monthly-pass holder parks free             | 0.0                                | 0.0                                | PASS
+T24 | Rule: Car equals ElectricCar with same regNo     | true                               | true                               | PASS
+T25 | Scenario: day total vs hand calculation (375)    | 375.0                              | 375.0                              | PASS
+
+Passed 25 / 25

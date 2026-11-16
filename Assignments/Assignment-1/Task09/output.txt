@@ -1,0 +1,4 @@
+Parking Rs 105.0, charging 10 kWh Rs 120.0
+Charging billed separately from parking; GST on charging = Rs 21.6
+Interface-based EV: Rs 105.0 (state 'reg' had to be re-declared in each class)
+Method call cost: abstract-class call is invokevirtual, interface call is invokeinterface; both O(1).

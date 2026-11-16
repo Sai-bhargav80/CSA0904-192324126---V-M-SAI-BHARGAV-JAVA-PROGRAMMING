@@ -1,0 +1,12 @@
+Search (worst case, n = 100000)
+  Objects        : index 99999, 1321192 ns per search
+  Parallel arrays: index 99999, 606239 ns per search
+Both designs are O(n) for linear search by registration number.
+
+Adding attribute 'ownerCategory':
+  Objects        : add ONE field to class Vehicle (1 place changed).
+  Parallel arrays: declare a new array and update EVERY place that
+                   inserts, removes or shifts vehicles (many places).
+
+Out-of-sync demo: regNo[0]=TN02 but type[0]=CAR  (type no longer matches the vehicle!)
+Space per vehicle: objects = object header + 3 fields; parallel arrays = 3 array slots, no object header. Both O(1) per vehicle, O(n) total.

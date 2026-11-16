@@ -1,0 +1,12 @@
+Facility: 5 floors with {2,3,1,4,2} slots, capacity 12
+IN   Ticket#1001 EBIKE[EB1] floor 0 slot 0 in=540
+IN   Ticket#1002 VAN[V1] floor 0 slot 1 in=510
+IN   Ticket#1003 CAR[C1] floor 1 slot 0 in=540
+IN   Ticket#1004 CAR[C2] floor 1 slot 1 in=600
+IN   Ticket#1005 TWOWHEELER[T1] floor 1 slot 2 in=600
+OUT  EB1 fee = Rs 20.0
+OUT  V1 fee = Rs 150.0
+OUT  C1 fee = Rs 90.0
+OUT  C2 fee = Rs 0.0
+OUT  T1 fee = Rs 0.0
+Total collection = Rs 360.0   (hand calculation: 100 pass + 20 + 150 + 90 + 0 + 0 = 360)

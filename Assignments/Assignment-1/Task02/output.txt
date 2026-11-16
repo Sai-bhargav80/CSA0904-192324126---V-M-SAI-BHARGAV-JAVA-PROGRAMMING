@@ -1,0 +1,11 @@
+minutes | wrong (int div) | wrong (late cast) | correct (ceil)
+    130 |            60.0 |              60.0 |           90.0
+     45 |             0.0 |               0.0 |           30.0
+      0 |             0.0 |               0.0 |            0.0
+
+long -> int narrowing: 1700000000000 becomes -807049216 (overflow!)
+Jagged array: floors = 3, total slots = 170
+  floor 0 has 20 slots
+  floor 1 has 50 slots
+  floor 2 has 100 slots
+Flat array index of (floor 1, slot 7) = 27  (floor*slotsPerFloor+slot only works when every floor has equal slots)
