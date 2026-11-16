@@ -1,0 +1,12 @@
+Hand-calculated day (rates: bike 10, car 30, EV 35 per started hour, cap 8 hours):
+IN   Ticket#1001 TWOWHEELER[TN01A1] floor 0 slot 0 in=540
+IN   Ticket#1002 CAR[TN02B2] floor 0 slot 1 in=540
+IN   Ticket#1003 EV[TN03C3] floor 1 slot 0 in=550
+IN   Ticket#1004 CAR[TN04D4] floor 1 slot 1 in=600
+IN   Ticket#1005 CAR[TN05E5] floor 1 slot 2 in=600
+OUT  TN01A1 fee = Rs 10.0
+OUT  TN02B2 fee = Rs 90.0
+OUT  TN03C3 fee = Rs 35.0
+OUT  TN04D4 fee = Rs 0.0
+OUT  TN05E5 fee = Rs 240.0
+Total collection = Rs 375.0   (hand calculation: 10+90+35+0+240 = 375)

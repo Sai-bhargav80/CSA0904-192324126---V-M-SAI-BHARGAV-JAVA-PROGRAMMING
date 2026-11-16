@@ -1,0 +1,12 @@
+Reservation#1(floor 1, slot 7, 90 min)
+Rejected: Duration cannot be negative: -5
+Rejected: Invalid slot: -1
+State unchanged after rejected updates: Reservation#1(floor 1, slot 7, 90 min)
+
+Integer 127 == 127   : true   (cached objects)
+Integer 1000 == 1000 : false  (two different objects!)
+Integer 1000 equals  : true   <- always use equals() for wrappers
+Auto-unboxing null -> NullPointerException
+
+Public-field design accepted floor = -3 (invalid state!)
+Validation cost: O(1) per update in both designs; setter = 1 place, public fields = every caller.

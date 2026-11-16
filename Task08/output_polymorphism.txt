@@ -1,0 +1,7 @@
+Declared type: PVehicle, actual type: PEv, method run: PEv.rate() -> 35.0
+calculateFee(int)            : 105.0
+calculateFee(LocalTime,...)  : 105.0
+PBike dispatch=30.0  instanceof=30.0
+PCar dispatch=90.0  instanceof=90.0
+PEv dispatch=105.0  instanceof=105.0
+20M fee calls: dynamic dispatch 86 ms, instanceof chain 47 ms [true]
