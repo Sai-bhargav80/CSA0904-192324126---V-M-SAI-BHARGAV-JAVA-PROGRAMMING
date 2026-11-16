@@ -1,0 +1,31 @@
+ID  | Test case (new requirements)                         | Expected                   | Actual                     | Result
+N01 | E-bike: 45 min flat fee                              | 20.0                       | 20.0                       | PASS
+N02 | E-bike: 600 min still flat                           | 20.0                       | 20.0                       | PASS
+N03 | E-bike: zero minutes                                 | 0.0                        | 0.0                        | PASS
+N04 | Van off-peak 08:00-09:00 (hour starts 08:00)         | 30.0                       | 30.0                       | PASS
+N05 | Van peak 10:00-11:00                                 | 60.0                       | 60.0                       | PASS
+N06 | Van mixed 08:30-10:45 (30+60+60)                     | 150.0                      | 150.0                      | PASS
+N07 | Van boundary: hour starts exactly 09:00 = peak       | 60.0                       | 60.0                       | PASS
+N08 | Van boundary: hour starts exactly 17:00 = off-peak   | 30.0                       | 30.0                       | PASS
+N09 | Van boundary: hour starts 16:59 = peak               | 60.0                       | 60.0                       | PASS
+N10 | Van boundary: hour starts 08:59 = off-peak           | 30.0                       | 30.0                       | PASS
+N11 | Van: 09:00-18:00 capped at daily max                 | 480.0                      | 480.0                      | PASS
+N12 | Van: zero minutes                                    | 0.0                        | 0.0                        | PASS
+N13 | Van polymorphic via Vehicle reference                | 60.0                       | 60.0                       | PASS
+N14 | Regression: car 130 min unchanged                    | 90.0                       | 90.0                       | PASS
+N15 | Regression: EV 130 min unchanged                     | 105.0                      | 105.0                      | PASS
+N16 | Regression: 2-arg default equals 1-arg for car       | 60.0                       | 60.0                       | PASS
+N17 | One-day pass valid on purchase day                   | true                       | true                       | PASS
+N18 | One-day pass invalid next day                        | false                      | false                      | PASS
+N19 | Monthly pass valid inside range                      | true                       | true                       | PASS
+N20 | Monthly pass expired after range                     | false                      | false                      | PASS
+N21 | Invalid pass range rejected                          | pass end before start      | pass end before start      | PASS
+N22 | Visitor with valid one-day pass parks free           | 0.0                        | 0.0                        | PASS
+N23 | Visitor with expired one-day pass pays               | 150.0                      | 150.0                      | PASS
+N24 | Pass sale counted in collection (150 + 100)          | 250.0                      | 250.0                      | PASS
+N25 | 5 floors, unequal sizes: allocation order            | 0:0 0:1 1:0 1:1 1:2 2:0 3:0 3:1 3:2 3:3 4:0 4:1  | 0:0 0:1 1:0 1:1 1:2 2:0 3:0 3:1 3:2 3:3 4:0 4:1  | PASS
+N26 | 5 floors: 13th vehicle rejected (capacity 12)        | Parking full               | Parking full               | PASS
+N27 | Unknown type still rejected                          | Unknown vehicle type: BUS  | Unknown vehicle type: BUS  | PASS
+N28 | Scenario: day total vs hand calculation (360)        | 360.0                      | 360.0                      | PASS
+
+Passed 28 / 28

@@ -1,0 +1,10 @@
+[static block] Ticket class loaded
+Tickets: 1001, 1002, 1003  issued=3
+
+Instance counter: north issues 1001, south issues 1001  <-- DUPLICATE ticket numbers!
+Fix A (static)      : 1001, 1002, 1003
+Fix B (gate prefix) : N-1, S-1, N-2
+
+Primitive passed by value, x still 5; object reference copied, same Ticket#1001
+After exit, ticket collected by GC? true (GC timing is not guaranteed)
+Space for counter: static = O(1); instance = O(k) for k facilities; tickets O(n) either way.

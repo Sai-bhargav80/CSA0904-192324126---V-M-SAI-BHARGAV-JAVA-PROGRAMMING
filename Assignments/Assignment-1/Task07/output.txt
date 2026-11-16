@@ -1,0 +1,13 @@
+TwoWheeler[TN01A1] 130 min -> Rs 30.0
+Car[TN02B2] 130 min -> Rs 90.0
+DeliveryVan[TN03C3] 130 min -> Rs 185.0
+
+equals same reg  : true
+hashCode equal   : true
+HashSet contains new Car("TN02B2"): true
+duplicate add rejected: true
+
+Switch version of the van, 130 min -> Rs 185.0
+Switch version fails for a new type: unknown type EBIKE
+Overriding: adding a type = 1 new class, 0 changed. Switch: 1 existing method edited, retest all types.
+Time per fee: overriding O(1); switch on String O(1) (hash) / O(k) with an if-else chain.

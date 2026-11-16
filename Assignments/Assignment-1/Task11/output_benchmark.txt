@@ -1,0 +1,10 @@
+n=  2000 array      exit of all n vehicles:      114 ms (57489 ns per exit), structure memory ~ 0 KB, hits=2000
+n=  2000 ArrayList  exit of all n vehicles:       88 ms (44305 ns per exit), structure memory ~ 3 KB, hits=2000
+n=  2000 HashMap    exit of all n vehicles:        1 ms (530 ns per exit), structure memory ~ 68 KB, hits=2000
+n= 10000 array      exit of all n vehicles:      851 ms (85179 ns per exit), structure memory ~ 0 KB, hits=10000
+n= 10000 ArrayList  exit of all n vehicles:      111 ms (11167 ns per exit), structure memory ~ 0 KB, hits=10000
+n= 10000 HashMap    exit of all n vehicles:        0 ms (61 ns per exit), structure memory ~ 282 KB, hits=10000
+n= 40000 array      exit of all n vehicles:     3897 ms (97449 ns per exit), structure memory ~ 0 KB, hits=40000
+n= 40000 ArrayList  exit of all n vehicles:     2089 ms (52244 ns per exit), structure memory ~ 0 KB, hits=40000
+n= 40000 HashMap    exit of all n vehicles:        6 ms (163 ns per exit), structure memory ~ 1320 KB, hits=40000
+array/ArrayList: O(n) per exit (O(n^2) for n exits); HashMap: O(1) expected per exit. Space O(n) for all three.
